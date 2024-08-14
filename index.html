@@ -1,44 +1,207 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <h2>Getting to the Moon - the Translunar Injection</h2>
-    <meta charset="utf-8">
-    <title>Translunar Injection</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Saha - ML Interpretability & Geometric Deep Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-
-        /* Your CSS styles go here */
-        body {
-        font-family: 'Roboto', cursive; /* Set the font for the body text */
-        font-size: 15px;
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --accent-color-1: #3498db;
+            --accent-color-2: #e74c3c;
+            --accent-color-3: #2ecc71;
         }
-	.my-button {
-      padding: 20px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 60px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        h2 {
+            color: var(--accent-color-1);
+            border-bottom: 1px solid var(--accent-color-1);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .intro {
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .experience-item, .project-item {
+            margin-bottom: 15px;
+        }
+        .experience-item h3, .project-item h3 {
+            margin-bottom: 5px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        a {
+            color: var(--accent-color-1);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
-<p>During the Apollo 11 mission, the astronauts got a special rocket boost
-     called translunar injection, which helped their spacecraft leave Earth 
-     and embark on the incredible journey to land on the Moon! 
-</p>
-<p>Let's learn about the three stages!</p>
 <body>
-<button id="earth">Earth Orbit</button>
-<button id="tli">TLI Orbit</button>
-<button id="moon">Moon Orbit</button>
-<button id="stop">Stop Animation</button>
+    <div class="container">
+        <header>
+            <img src="/api/placeholder/100/100" alt="Ishan Saha" class="profile-img">
+            <div>
+                <h1>Ishan Saha</h1>
+                <p>ML Interpretability & Geometric Deep Learning @ Princeton University</p>
+                <p><a href="mailto:ishansaha@princeton.edu">ishansaha@princeton.edu</a> • +1 (571) 598-4285 • <a href="https://github.com/ishansaha01" target="_blank">GitHub</a></p>
+            </div>
+        </header>
 
-<script type="module" src="/main.js"></script>
+        <main>
+            <section class="section">
+                <h2>Education</h2>
+                <div class="experience-item">
+                    <h3>Princeton University, Princeton, NJ</h3>
+                    <p><strong>Bachelor of Science and Engineering, Electrical & Computer Engineering</strong> (2022-2026)</p>
+                    <p>ECE Department GPA: 3.85</p>
+                    <p>Certificates/Minors: Applied & Comp. Mathematics, Computer Science</p>
+                    <p>Relevant Coursework: Machine Learning, Programming Systems, Data Structures, Networks Theory, Circuit Design, Digital Signal Processing</p>
+                    <p>Activities: Princeton Autonomous Vehicle Engineering, Forge, Student in Quantum, Tigertones</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Loudoun Academy of Science, Ashburn, VA</h3>
+                    <p>Loudoun AOS: STEM Magnet Program for academic research in science fields (1.5% Acceptance Rate) (2018-2022)</p>
+                    <p>GPA: 4.62</p>
+                    <p>Activities: Physics Club President, QuarkNet Board Member, Secret Math Society Co-founder, Chamber Choir</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Professional Experience</h2>
+                <div class="experience-item">
+                    <h3>Princeton CAB Lab, Princeton, NJ</h3>
+                    <p><strong>Geometric Deep Learning Researcher</strong> (August 2023-Present)</p>
+                    <ul>
+                        <li>Designing graph neural networks (GNNs) which leverage how groups in nature form opinions; preliminary results challenging the popular frameworks (GCN, GAT); 85% on Cora Dataset, beating GCN (82%) and GAT (83%)</li>
+                        <li>Publishing as 2nd-author for Fall 2024; spearheaded research directions in designing new methods for interpretability of deep learning systems via multi-agent network theory, with new approaches to robustness of network outcomes</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Smithsonian Institution, Washington D.C.</h3>
+                    <p><strong>Lead Software Engineer & Explainer</strong> (June 2023-Present)</p>
+                    <ul>
+                        <li>Spearheaded an Apollo Mission Ed-Tech Program through building WebXR AR solutions and HTML for the Virtual Air & Space Explainers Program, reaching 200+ students internationally per year for STEM Education</li>
+                        <li>Presented Ed-Tech Initiative for 50+ Air and Space Explainer Stakeholders, Ed-tech employees, and Smithsonian 3D Digitization Team, leading trainings by Fall 2024 for public release</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>University of Maryland, College Park, Maryland</h3>
+                    <p><strong>Dynamical Systems & Algorithms Intern</strong> (May 2020-July 2022)</p>
+                    <ul>
+                        <li>Designed innovative algorithms and machine learning models for data science and mechanics, drawing inspiration from Lyapunov theory and dynamical systems principles, under the guidance of Prof. James Yorke</li>
+                        <li>Featured in the UMD Mathematics Newsletter and mentioned in the mathematical modeling paper "When the Best Pandemic Models Are the Simplest," showcasing the impact and recognition of my work in the field</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <section class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span class="skill">Python</span>
+                    <span class="skill">Java</span>
+                    <span class="skill">Julia</span>
+                    <span class="skill">Mathematica</span>
+                    <span class="skill">C++</span>
+                    <span class="skill">C</span>
+                    <span class="skill">Perl</span>
+                    <span class="skill">CUDA</span>
+                    <span class="skill">Verilog</span>
+                    <span class="skill">FFT</span>
+                    <span class="skill">CAD</span>
+                    <span class="skill">Raspberry Pi</span>
+                    <span class="skill">Arduino</span>
+                    <span class="skill">MYSQL</span>
+                    <span class="skill">Kafka</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Projects & Publications</h2>
+                <div class="project-item">
+                    <h3>Princeton Course Recommendation Search Engine with GNNs</h3>
+                    <p><strong>Spring 2024-Now</strong></p>
+                    <p>Building a Deep Learning Course Recommendation Search Engine with GNNs for 10,000+ yearly users at TigerApps.org, constructed Prerequisite/Corequisite Knowledge Graph, GCN-based algorithm for application</p>
+                    <p><a href="#" target="_blank">Knowledge Graph Construction Paper</a></p>
+                </div>
+                <div class="project-item">
+                    <h3>Nonlinear Opinion Dynamics for GNNs</h3>
+                    <p><strong>Spring 2024-Now</strong></p>
+                    <p>Designing an expressive message-passing framework with Graph Neural Networks, inspired by multi-agent groups in nature</p>
+                    <p>Advisor: Prof. Christine Allen-Blanchette</p>
+                    <p>Awards: Princeton's Project-X Fund for Independent Research</p>
+                </div>
+                <div class="project-item">
+                    <h3>Semi-Autonomous Electric Skateboard</h3>
+                    <p><strong>Summer 2018-Now</strong></p>
+                    <p>Designing a 35+ MPH TinyML Computer Vision Solution for building a collision-avoidance semi-autonomous electric skateboard</p>
+                    <p>Awards: Princeton's Fred Fox Prize for Independent Projects, LCPS Maker Showcase</p>
+                </div>
+                <div class="project-item">
+                    <h3>Lyapunov Theory Nonlinear Regression for Asteroid Modeling Application</h3>
+                    <p><strong>2020-2022</strong></p>
+                    <p>Proof-of-concept of Lyapunov Exponents for satellite trajectories in asteroid-surveying missions (Python); journal submission in 2024</p>
+                    <p>Advisor: Prof. James Yorke</p>
+                    <p>Awards: AIAA Society, Mu Alpha Theta Awardee, US Air Force Awardee</p>
+                    <p><a href="#" target="_blank">Lightning Presentation</a></p>
+                </div>
+            </section>
+        </aside>
+    </div>
 </body>
 </html>
